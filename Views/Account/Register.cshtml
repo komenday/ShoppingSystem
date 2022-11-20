@@ -1,0 +1,47 @@
+﻿@model TaskAuthenticationAuthorization.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Registration</h1>
+
+<form asp-action="Register" asp-controller="Account">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <div class="form-group">
+            <label asp-for="LastName" class="control-label"></label><br />
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="FirstName" class="control-label"></label><br />
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label><br />
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Email" class="control-label">Enter Email</label><br />
+            <input type="text" asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"/>
+        </div>
+        <div>
+            <label asp-for="Password" class="control-label">Enter password</label><br />
+            <input asp-for="Password" class="form-control"/>
+            <span asp-validation-for="Password" class="text-danger"/>
+        </div>
+        <div>
+            <label asp-for="PasswordConfirm" class="control-label">Confirm Password</label><br />
+            <input asp-for="PasswordConfirm" class="form-control"/>
+            <span asp-validation-for="PasswordConfirm" class="text-danger"/>
+        </div>
+
+        <div class="form-group">
+            <br />
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
